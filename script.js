@@ -7,9 +7,7 @@ const usernameContainer = document.querySelector(".username_container");
 
 const searchUser = document.querySelector(".search_btn");
 
-
-
- searchUser.addEventListener('click' , function() {
+searchUser.addEventListener("click", function () {
   let InputValue = document.querySelector(".search-data").value;
   fetch(`https://api.github.com/users/${InputValue}`)
     .then((response) => response.json())
@@ -17,11 +15,7 @@ const searchUser = document.querySelector(".search_btn");
       console.log(data);
       renderUsers(data);
     });
-
-})
-
-
-
+});
 
 const renderUsers = function (usersData) {
   console.log(usersData);
@@ -32,12 +26,18 @@ const renderUsers = function (usersData) {
   </div>
   <div class="bio">
     <div>
-    <h2>NAME: ${usersData.name}</h2>
+    <h2> ${usersData.name}</h2>
     <p>${usersData.login}</p>
     <!-- <p>This profile has no bio</p> -->
     </div>
     <div>
-      <p class="date_joined">${usersData.created_at}</p>
+       <p class="date_joined">${new Date(usersData.created_at).toLocaleDateString('en-us', {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+
+       })}</p>
+    
     </div>
   </div>
 
@@ -73,17 +73,12 @@ const renderUsers = function (usersData) {
   <div class="location">
       <span><i class="fa-solid fa-building"></i>${usersData.company}</span>
     </div>
-  </div> `
+  </div> `;
 };
 
 // fetchUsers();
 
-
-
-
-
-
-
+// function for background flipper
 
 
 
