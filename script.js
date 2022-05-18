@@ -1,15 +1,20 @@
 "use strict";
-// let userName = "";
-const url = `https://api.github.com/users/ukaoha`;
+// Todos
+// grap the user container 
+// grab search button 
+// fetch Api 
+// render the data to the dom 
+// add daerk mode to your site
+
 
 const usernameContainer = document.querySelector(".username_container");
-// const InputValue = document.querySelector(".search__data").value;
 
 const searchUser = document.querySelector(".search_btn");
 
 searchUser.addEventListener("click", function () {
   let InputValue = document.querySelector(".search-data").value;
   fetch(`https://api.github.com/users/${InputValue}`)
+  // convert data to json
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
@@ -35,12 +40,10 @@ const renderUsers = function (usersData) {
         day: "numeric",
         month: "short",
         year: "numeric",
-
        })}</p>
     
     </div>
   </div>
-
   </div>
   <div class="bio_wrap">
     <p>${usersData.bio}</p>
@@ -59,7 +62,6 @@ const renderUsers = function (usersData) {
       <h2>${usersData.following}</h2>
     </div>
   </div>
-
   <div class="location__container">
     <div class="location">
       <span><i class="fa-solid fa-location-dot"></i>${usersData.location}</span>
@@ -79,7 +81,15 @@ const renderUsers = function (usersData) {
 // fetchUsers();
 
 // function for background flipper
+const backgroundFlipper = document.getElementById('darkIcon');
 
-
+backgroundFlipper.onclick = function(){
+  document.body.classList.toggle('light');
+  if(document.body.classList.contains('light')){
+    backgroundFlipper ;
+  }else{
+    backgroundFlipper.innerHTML = `<i id="lightIcon" class="fa-solid fa-circle-half-stroke"></i>`
+  }
+}
 
 

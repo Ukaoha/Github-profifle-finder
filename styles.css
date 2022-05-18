@@ -1,9 +1,10 @@
 /* global styling */
 :root{
---primary-color: #0079ff;
+   --primary-color: #0079ff; 
 --dark-color: #141d2f;
---white-color: #fff;
+--white-color: #fff; color: var(--white-color);
 --secondary-color: #1e2a47;
+    fill: var(--white-color);
 --main-background-color: #f6f8ff;
 --main-white-color: #fefefe;
 --black-color: #222731;
@@ -18,6 +19,7 @@
 --heading-three-font: clamp(1.6rem, 3vw, 2.4rem);
 --heading-four-font: clamp(1.3rem, 2.5vw, 2rem);
 --body-font: clamp(1.5rem, 2vw, 2.5rem);
+
 }
 *{
     padding: 0;
@@ -47,7 +49,9 @@ html {
   }
   
   .light {
-    color: var(--light-pale-blue);
+    /* color: var(--light-pale-blue); */
+    color: var(--white-color);
+background-color: var(--black-color);
     fill: var(--white-color);
   }
   
@@ -64,7 +68,7 @@ html {
     height: 50px;
     padding: 2px;
     /* background: #1e232b; */
-    background-color:var (--main-background-color);
+    background-color:var(--main-background-color);
     box-shadow: 0 0 3rem rgba(0 0 0 / 0.075);
 
     min-width: 18%!important; 
@@ -72,6 +76,9 @@ html {
     border-radius: .10rem;
   
   
+  }
+  .light .search_section{
+    background-color: var(--secondary-color);
   }
   .search-data{
     width: 100%;
@@ -85,6 +92,9 @@ html {
     background: none;
 
   
+}
+.light .search-data{
+  color: var(--main-background-color);
 }
  .search_btn{ 
     padding: 10px 20px;
@@ -113,9 +123,8 @@ html {
     
   }
   .username_container{
-    background-color: --main-background-color;
+    background-color: var(--main-background-color);
     box-shadow: 0 0 8rem rgba(0 0 0 / 0.075);
-    /* box-shadow: 0 1.5rem 1rem rgba(0 0 0 / 0.075); */
 
     margin-top: 10px;
     border-radius: 0.75rem;
@@ -142,9 +151,11 @@ html {
 .repos__container{
   display: flex;
   padding: 2rem 3rem;
-  background-color: var(--light-gray-color);
+  background-color: var(--light-pale-blue);
   justify-content: space-between;
   margin-bottom: 30px;
+  font-weight: 100;
+  border-radius: .20rem;
 }
 .location__container{
   display: flex;
@@ -153,12 +164,18 @@ html {
   
 
 }
+.light .username_container{
+  background-color:var(--secondary-color) ;
+}
 .location i{
   margin-right: 30px;
 }
 .location  a {
   text-decoration: none;
   color:var(--light-dark-gray) ;
+}
+.light .location a{
+  color:var(--main-background-color);
 }
 /* meduim devices */
 @media only screen and (min-width: 768px){
