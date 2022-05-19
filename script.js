@@ -3,7 +3,7 @@
 // grap the user container 
 // grab search button 
 // fetch Api 
-// render the data to the dom 
+// render the data to the dom  only if username is correct , else user not found
 // add daerk mode to your site
 
 
@@ -19,9 +19,11 @@ searchUser.addEventListener("click", function () {
     .then((data) => {
       console.log(data);
       
-      if(data.name && data.login ) {
-        renderUsers(data);
+      if(data.login ) {
+        usernameContainer.style = "display: block";
+        renderUsers(data)
       } else{
+        usernameContainer.style = "display: block";
         usernameContainer.innerHTML = `<h1 style="text-align: center">User not found <span class="error-message">⚠</span> </h1>`;
 
       }

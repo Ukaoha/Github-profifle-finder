@@ -131,6 +131,7 @@ background-color: var(--black-color);
     border-radius: 0.75rem;
     padding: 3rem 1.5rem;
     margin-bottom: 20px;
+    display: none;
   }
 .bio-update{
   display: flex;
