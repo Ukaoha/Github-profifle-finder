@@ -1,5 +1,5 @@
 "use strict";
-// Todos
+// /Todos
 // grap the user container 
 // grab search button 
 // fetch Api 
@@ -18,7 +18,13 @@ searchUser.addEventListener("click", function () {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      renderUsers(data);
+      
+      if(data.name && data.login ) {
+        renderUsers(data);
+      } else{
+        usernameContainer.innerHTML = `<h1 style="text-align: center">User not found <span class="error-message">⚠</span> </h1>`;
+
+      }
     });
 });
 
@@ -86,10 +92,14 @@ const backgroundFlipper = document.getElementById('darkIcon');
 backgroundFlipper.onclick = function(){
   document.body.classList.toggle('light');
   if(document.body.classList.contains('light')){
-    backgroundFlipper ;
+    backgroundFlipper.src = "img/moon.png";
   }else{
-    backgroundFlipper.innerHTML = `<i id="lightIcon" class="fa-solid fa-circle-half-stroke"></i>`
+    backgroundFlipper.src = "img/light.png"
   }
 }
+
+
+
+
 
 
