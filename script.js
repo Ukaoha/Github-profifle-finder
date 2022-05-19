@@ -73,7 +73,7 @@ const renderUsers = function (usersData) {
       <span><i class="fa-solid fa-location-dot"></i>${usersData.location}</span>
     </div>
     <div class="location">
-    <span><i class="fa-brands fa-twitter-square"></i><a target="_blank" href="${usersData.twitter_username}">Twitter</a></span>
+    <span><i class="fa-brands fa-twitter-square"></i><a target='_blank' href="${usersData.twitter_username}">Twitter</a></span>
   </div>
   <div class="location">
   <span> <i class="fa-solid fa-link"></i><a target="_blank" href="${usersData.html_url}">Visit profile</a></span>
