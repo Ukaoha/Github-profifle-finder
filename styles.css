@@ -61,6 +61,13 @@ background-color: var(--black-color);
       display: flex;
       justify-content: space-between;
   }
+  .title a {
+    text-decoration: none;
+  color: #222;
+  }
+  .light .title a{
+    color: #fff;
+  }
   .title span{
       font-size: 1.5rem;
   }
