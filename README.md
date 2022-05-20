@@ -2,17 +2,21 @@
 An App built in JavaSript to search real github users
 ## Project Description
 Find users profiles, followers,following, number of repositeries etc by just entering thier username.
-![Screenhot](/img/Github%20profile%20finder%20(2).png)
-App returns users profile , when no user is found ,a messeage indicating that there is no user ⚠
-![Screenshot](/img/Github%20profile%20finder%20(2).png)
 
+![Screenhot](/img/Github%20profile%20finder%20(3).png)
+
+App returns users profile , when no user is found, a messeage indicating that there is no user ⚠
+
+![Screenshot](/img/Github%20profile%20finder%20(2).png)
+# Links
+[Repository](https://github.com/Ukaoha/Github-profile-finder)
 [Live site](https://ukaoha.github.io/Github-profile-finder/)
 # Built with 
 * HTML5 
 * CSS flexbox 
 * Fetch API , JavaScript Promises
 * Mobile-first workflow
-# What I learnd 
+# What I learned 
 * I learned how to use Fetch API to make HTTP request
 * I learned about JavaScript Promises
 * I also learned how Interact with the  DOM
